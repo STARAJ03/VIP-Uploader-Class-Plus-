@@ -48,11 +48,11 @@ bot = Client("bot",
    api_hash= "9df1f705c8047ac0d723b29069a1332b"
 )
 
-@bot.on_message(filters.command(["started"]))    
+@bot.on_message(filters.command(["start"]))    
 async def account_login(bot: Client, m: Message):    
     editable = await m.reply_text("**👋 ʜᴇʟʟᴏ!\n🌟ɪ ᴀᴍ ᴛxᴛ ꜰɪʟᴇ ᴅᴏᴡʟᴏᴀᴅᴇʀ ʙᴏᴛ** \n\n❤️‍🔥 **ᴘʀᴇꜱꜱ /scammer ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ᴠɪᴅᴇᴏ ʙʏ ᴛxᴛ**\n\n❤️‍🩹 **ᴊᴏɪɴ ᴏᴜʀ <a href='https://t.me/'>ᴛᴇʟᴇɢʀᴀᴍ ᴄʜᴀɴɴᴇʟ</a>** \n\n<pre>💗 ᴘᴏᴡᴇʀᴇᴅ ʙʏ : https://t.me/Alex_Aditya9</pre>\n-═════━‧₊˚❀༉‧₊˚.━═════-") 
 
-@bot.on_message(filters.command("Ruko"))    
+@bot.on_message(filters.command("stop"))    
 async def restart_handler(_, m):    
     await m.reply_text("🚯 **ꜱᴛᴏᴘᴘᴇᴅ** 🚯", True)    
     os.execl(sys.executable, sys.executable, *sys.argv)
@@ -80,7 +80,7 @@ async def download_pdf(url, filename):
         raise
 
 
-@bot.on_message(filters.command(["Sorry"]))    
+@bot.on_message(filters.command(["StarAJ"]))    
 async def account_login(bot: Client, m: Message):    
     editable = await m.reply_text('**-═════━‧₊˚❀༉‧₊˚.━═════-\n📝 ꜱᴇɴᴅ ᴛxᴛ ꜰɪʟᴇ ꜰᴏʀ ᴅᴏᴡɴʟᴏᴀᴅ**\n-═════━‧₊˚❀༉‧₊˚.━═════-')
     input: Message = await bot.listen(editable.chat.id)
@@ -210,7 +210,7 @@ async def account_login(bot: Client, m: Message):
             
             elif "apps-s3-jw-prod.utkarshapp.com" in url:
                 if 'enc_plain_mp4' in url:
-                    url = url.replace(url.split("/")[-1], res+'.mp4')
+                    url = url
                     
                 elif 'Key-Pair-Id' in url:
                     url = None
