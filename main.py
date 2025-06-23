@@ -210,7 +210,7 @@ async def account_login(bot: Client, m: Message):
             
             elif "apps-s3-jw-prod.utkarshapp.com" in url:
                 if 'enc_plain_mp4' in url:
-                    url = url
+                    url = url.replace(url.split("/")[-1], res+'.mp4')
                     
                 elif 'Key-Pair-Id' in url:
                     url = None
